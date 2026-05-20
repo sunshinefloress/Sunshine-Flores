@@ -21,7 +21,11 @@ function trocarImagem() {
 
 setInterval(trocarImagem, 2000)
 
+history.scrollRestoration = "manual";
 
+window.onload = function () {
+    window.scrollTo(0, 0);
+}
 
 
 
