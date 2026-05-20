@@ -21,10 +21,7 @@ function trocarImagem() {
 
 setInterval(trocarImagem, 2000)
 
-window.onload = function () {
 
-    window.scrollTo(0, 0);
-}
 
 
 
