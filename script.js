@@ -1,4 +1,4 @@
-const imagens = [
+/*const imagens = [
     "img/imagens.jpg",
     "img/imagens1.jpg",
     "img/imagens2.jpg",
@@ -20,13 +20,39 @@ function trocarImagem() {
 }
 
 setInterval(trocarImagem, 2000)
+*/
 
-history.scrollRestoration = "manual";
 
-window.onload = function () {
-    window.scrollTo(0, 0);
+
+const produtos = document.querySelectorAll(".produto");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+produtos.forEach(p => observer.observe(p));
+
+
+function abrirZoom(img) {
+    const zoom = document.getElementById("zoom");
+    const zoomImg = document.getElementById("zoomImg");
+
+    zoom.style.display = "flex";
+    zoomImg.src = img.src;
+}
+
+function fecharZoom() {
+    document.getElementById("zoom").style.display = "none";
 }
 
 
-
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 50);
+});
 
