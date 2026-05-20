@@ -1,7 +1,8 @@
 const imagens = [
-    "img/flor1.jpg",
-    "img/flor2.jpg",
-    "img/flor3.jpg",
+    "img/imagens.jpg",
+    "img/imagens1.jpg",
+    "img/imagens2.jpg",
+    "img/imagens3.jpg",
     "img/flor4.jpg"
 ]
 let index = 0
@@ -19,6 +20,11 @@ function trocarImagem() {
 }
 
 setInterval(trocarImagem, 2000)
+
+window.onload = function () {
+
+    window.scrollTo(0, 0);
+}
 
 
 

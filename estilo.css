@@ -39,12 +39,11 @@ main{
 
 .produto{
     background: #fffdfd;
-    padding: 15px;
+    padding: 10px;
     border-radius: 25px;
     text-align: center;
     transition: 0.7s;
     box-shadow: 0 2px 8px rgba(236, 183, 195, 0.25);
-
     width: 280px;
 }
 .produto:hover{
@@ -87,7 +86,7 @@ main{
 .bainner{
     background-color: rgba(245, 222, 179, 0.336);
     width: 80%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 30px;
     padding: 20px;
     border-radius: 15%;
@@ -108,7 +107,7 @@ main{
     padding: 25px 30px;
     grid-template-columns: 1fr 1fr ;
     gap: 20px 35px;
-    width: 85%;
+    width: 90%;
     max-width: 650px;
     margin-left: 20px;
     margin-top: 30px;
@@ -161,24 +160,81 @@ main{
 }
 
 .banner img{
-    width: 100%;
-    height: 350px;
+     width: 100%;
+    height: 80vh;
     object-fit: cover;
     display: block;
-    border-radius: 30px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.603);
-    margin-top: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.747);
+
+}
+.texto-banner{
+
+    position: absolute;
+
+    top: 50%;
+    left: 8%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    max-width: 600px;
 }
 .banner h1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+      color: white;
+
+    font-size: 45px;
+
+    line-height: 1.1;
+
+    margin-top: 20px;
+
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    font-family: 'Playfair Display', serif;
+}
+    
+.banner p{
+     color: white;
+
+    font-size: 22px;
+
+    margin-top: 25px;
+
+    line-height: 1.5;
+
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    font-family: 'Poppins', sans-serif;
+
+}
+.texto-banner button{
+
+    margin-top: 30px;
+
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: #d4b26a;
 
     color: white;
-    font-size: 22px;
-    text-align: center;
-    width: 90%;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.texto-banner button:hover{
+
+    transform: scale(1.05);
 }
 
 p{
@@ -240,28 +296,27 @@ header h1{
 }
 
 .topo{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     position: absolute;
 
-    padding: 20px 10px;
-    background-color: transparent
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    padding: 20px 40px;
+    display: flex;
+    
     
 }
 
 .logo{
     width: 100%;
-    max-width: 500px;
-
-    height: auto;
+    max-width: 250px;
     display: block;
-    border-radius: 40px ;
-   
+ 
 }
-
-
-
 
 .des h1{
      display: block;
@@ -271,6 +326,55 @@ header h1{
     margin-top: 5px;
     font-weight: normal;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+.titulo-catalogo{
+
+
+    text-align: center;
+
+    font-size: 55px;
+
+    margin-top: 10px;
+
+    margin-bottom: 70px;
+
+    color: #d88bb2;
+}
+
+.categoria{
+ margin-left: 40px;
+
+    margin-top: 5px;
+
+    margin-bottom: 30px;
+
+    font-size: 38px;
+
+    color: #c26a93;
+
+    font-family: 'Playfair Display', serif;
+
+    border-left: 5px solid #d88bb2;
+
+    padding-left: 15px;
+   
+   
+}
+.linha-produtos{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    justify-content: center;
+}
+
+
 
 
 @media (max-widh: 780px){
@@ -278,7 +382,7 @@ header h1{
         padding: 10px;
     }
     .logo{
-        max-width: 100%;
+        max-width: 100px;
     }
 }
 @media(max-width){
@@ -313,4 +417,38 @@ header h1{
         margin: 20px auto;
 
     }
+    
 }
+@media (max-width: 768px){
+
+    .logo{
+        max-width: 50%;
+    }
+
+    .texto-banner{
+
+        left: 5%;
+
+        max-width: 90%;
+    }
+
+    .texto-banner h1{
+
+        font-size: 38px;
+    }
+
+    .texto-banner p{
+
+        font-size: 16px;
+    }
+
+    .btn{
+
+        padding: 12px 25px;
+
+        font-size: 14px;
+    }
+
+}
+
+
